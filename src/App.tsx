@@ -12,14 +12,14 @@ id: 1,
 name: "Ayam Potong Segar",  
 desc: "Ayam langsung dari peternakan, sehat & higienis.",  
 price: "Rp 45.000 / ekor",  
-img: "https://postimg.cc/7GYT6fKy",  
+img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCmSrwn3PXo2roPyPZAWZjEzzlDvaQ9KkuGkO6pVPuZQ&s=10",  
 },  
 {  
 id: 2,  
 name: "Nugget Ayam",  
 desc: "Olahan sehat tanpa pengawet, cocok untuk keluarga.",  
 price: "Rp 25.000 / pack",  
-img: "https://images.pexels.com/photos/4518665/pexels-photo-4518665.jpeg?auto=compress&cs=tinysrgb&w=400",  
+img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ46rYj2B-yUNKatPq7bUgnwaE4HUKgu4sxCnkJZQEIvg&s=10",  
 },  
 {  
 id: 3,  
@@ -33,14 +33,14 @@ id: 4,
 name: "Ayam Kampung",  
 desc: "Ayam kampung asli dengan rasa gurih alami.",  
 price: "Rp 70.000 / ekor",  
-img: "https://images.pexels.com/photos/1407815/pexels-photo-1407815.jpeg?auto=compress&cs=tinysrgb&w=400",  
+img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9kvm56SomI4e7uBldsUlJg1ciyCpg5e-Wmaepeju0Cg&s=10",  
 },  
 {  
 id: 5,  
 name: "Bakso Ayam",  
 desc: "Bakso ayam kenyal, tanpa borax & bahan berbahaya.",  
 price: "Rp 20.000 / pack",  
-img: "https://images.pexels.com/photos/5409024/pexels-photo-5409024.jpeg?auto=compress&cs=tinysrgb&w=400",  
+img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0imDCrYE_BaBqOR3n21AaNT4aoVq7C3e64hJB3uvi0Q&s=10",  
 },  
 ]  
   
@@ -294,9 +294,9 @@ higienis untuk keluarga tercinta.
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-4xl font-bold mb-6">Tentang Meisya Farm</h3>
+              <h3 className="text-4xl font-bold mb-6">Tentang Rasya Farm</h3>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Meisya Farm adalah usaha peternakan ayam yang berfokus pada produk
+                Rasya Farm adalah usaha peternakan ayam yang berfokus pada produk
                 segar dan olahan sehat seperti nugget. Kami mengutamakan kualitas,
                 higienitas, dan rasa yang lezat untuk seluruh pelanggan kami.
               </p>
@@ -519,7 +519,7 @@ higienis untuk keluarga tercinta.
             </Button>
             <div className="text-white/80">
               <p className="text-sm">Atau telepon langsung:</p>
-              <p className="font-semibold">+62 812-3456-7890</p>
+              <p className="font-semibold">+62 895-1216-5434</p>
             </div>
           </div>
         </div>
@@ -555,7 +555,7 @@ higienis untuk keluarga tercinta.
               <div className="space-y-2 text-gray-300">
                 <p className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <span>+62 812-3456-7890</span>
+                  <span>+62 895-1216-5434</span>
                 </p>
                 <p className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4" />
