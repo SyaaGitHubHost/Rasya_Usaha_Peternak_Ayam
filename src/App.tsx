@@ -322,7 +322,7 @@ higienis untuk keluarga tercinta.
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/1407354/pexels-photo-1407354.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://postimg.cc/7GYT6fKy"
                 alt="Peternakan Meisya Farm"
                 className="rounded-2xl shadow-xl w-full"
               />
