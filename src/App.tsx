@@ -341,7 +341,7 @@ higienis untuk keluarga tercinta.
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4">Form Pemesanan</h3>
             <p className="text-gray-600">
-              Isi form di bawah ini untuk memesan produk segar dari Meisya Farm
+              Isi form di bawah ini untuk memesan produk segar dari Rasya Farm
             </p>
           </div>
           <Card className="shadow-xl border-0">
