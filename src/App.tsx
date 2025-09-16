@@ -12,7 +12,7 @@ id: 1,
 name: "Ayam Potong Segar",  
 desc: "Ayam langsung dari peternakan, sehat & higienis.",  
 price: "Rp 45.000 / ekor",  
-img: "https://images.pexels.com/photos/162744/chicken-poultry-livestock-rural-162744.jpeg?auto=compress&cs=tinysrgb&w=400",  
+img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCmSrwn3PXo2roPyPZAWZjEzzlDvaQ9KkuGkO6pVPuZQ&s=10",  
 },  
 {  
 id: 2,  
@@ -534,7 +534,7 @@ higienis untuk keluarga tercinta.
                 <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
                   🐔
                 </div>
-                <h4 className="text-xl font-bold">Meisya Farm</h4>
+                <h4 className="text-xl font-bold">Rasya Farm</h4>
               </div>
               <p className="text-gray-300 leading-relaxed">
                 Ternak ayam dan olahan sehat terpercaya untuk keluarga Indonesia.
@@ -566,7 +566,7 @@ higienis untuk keluarga tercinta.
           </div>
           <hr className="my-8 border-gray-700" />
           <div className="text-center text-gray-400">
-            <p>&copy; 2025 Meisya Farm. Semua Hak Dilindungi.</p>
+            <p>&copy; 2025 Rasya Farm. Semua Hak Dilindungi.</p>
           </div>
         </div>
       </footer>
