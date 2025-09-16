@@ -1,217 +1,218 @@
-import { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Phone, MapPin, Clock, Star, ChevronDown, ChevronUp } from "lucide-react"
-
-// Data produk
-const products = [
-  {
-    id: 1,
-    name: "Ayam Potong Segar",
-    desc: "Ayam langsung dari peternakan, sehat & higienis.",
-    price: "Rp 45.000 / ekor",
-    img: "https://images.pexels.com/photos/162744/chicken-poultry-livestock-rural-162744.jpeg?auto=compress&cs=tinysrgb&w=400",
-  },
-  {
-    id: 2,
-    name: "Nugget Ayam",
-    desc: "Olahan sehat tanpa pengawet, cocok untuk keluarga.",
-    price: "Rp 25.000 / pack",
-    img: "https://images.pexels.com/photos/4518665/pexels-photo-4518665.jpeg?auto=compress&cs=tinysrgb&w=400",
-  },
-  {
-    id: 3,
-    name: "Telur Ayam",
-    desc: "Telur segar dengan kualitas terbaik.",
-    price: "Rp 28.000 / kg",
-    img: "https://images.pexels.com/photos/162712/egg-white-food-protein-162712.jpeg?auto=compress&cs=tinysrgb&w=400",
-  },
-  {
-    id: 4,
-    name: "Ayam Kampung",
-    desc: "Ayam kampung asli dengan rasa gurih alami.",
-    price: "Rp 70.000 / ekor",
-    img: "https://images.pexels.com/photos/1407815/pexels-photo-1407815.jpeg?auto=compress&cs=tinysrgb&w=400",
-  },
-  {
-    id: 5,
-    name: "Bakso Ayam",
-    desc: "Bakso ayam kenyal, tanpa borax & bahan berbahaya.",
-    price: "Rp 20.000 / pack",
-    img: "https://images.pexels.com/photos/4518842/pexels-photo-4518842.jpeg?auto=compress&cs=tinysrgb&w=400",
-  },
-]
-
-// Data testimoni
-const testimonials = [
-  {
-    name: "Budi Santoso",
-    location: "Jakarta Selatan",
-    rating: 5,
-    feedback:
-      "Nuggetnya enak banget, anak-anak suka. Pasti langganan terus di Meisya Farm!",
-  },
-  {
-    name: "Rina Putri",
-    location: "Depok",
-    rating: 5,
-    feedback:
-      "Ayam potong segar dan bersih, beda banget sama di pasar biasa. Recomended!",
-  },
-  {
-    name: "Andi Saputra",
-    location: "Tangerang",
-    rating: 5,
-    feedback: "Telurnya fresh, kuningnya oranye banget. Kualitas top!",
-  },
-]
-
-// Data FAQ
-const faqs = [
-  {
-    q: "Apakah produk bisa dikirim keluar kota?",
-    a: "Saat ini kami melayani pengiriman sekitar Jabodetabek. Untuk luar kota bisa diskusi via WhatsApp.",
-  },
-  {
-    q: "Apakah produk menggunakan bahan pengawet?",
-    a: "Tidak, semua produk olahan kami sehat tanpa pengawet dan bahan kimia berbahaya.",
-  },
-  {
-    q: "Bagaimana cara order?",
-    a: "Bisa langsung isi form pemesanan di website ini atau chat via WhatsApp untuk konsultasi lebih lanjut.",
-  },
-  {
-    q: "Berapa minimum order?",
-    a: "Minimum order Rp 50.000 untuk area Jakarta dan sekitarnya, diluar area bisa diskusi.",
-  },
-  {
-    q: "Apakah ada garansi kualitas?",
-    a: "Ya, kami berikan garansi 100% fresh. Jika tidak sesuai, bisa dikomplain dan akan kami ganti.",
-  },
-]
-
-function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
-      <button
-        className="w-full p-6 text-left bg-white hover:bg-gray-50 transition-colors flex justify-between items-center"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <h4 className="font-semibold text-lg pr-4">{question}</h4>
-        {isOpen ? (
-          <ChevronUp className="h-5 w-5 text-gray-500 flex-shrink-0" />
-        ) : (
-          <ChevronDown className="h-5 w-5 text-gray-500 flex-shrink-0" />
-        )}
-      </button>
-      {isOpen && (
-        <div className="px-6 pb-6 bg-yellow-50">
-          <p className="text-gray-700 leading-relaxed">{answer}</p>
-        </div>
-      )}
-    </div>
-  )
-}
-
-export default function App() {
-  // State untuk form
-  const [name, setName] = useState("")
-  const [phone, setPhone] = useState("")
-  const [address, setAddress] = useState("")
-  const [product, setProduct] = useState("")
-  const [quantity, setQuantity] = useState("")
-  const [notes, setNotes] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
-      const message = `*PESANAN BARU - MEISYA FARM*\n\n` +
-        `👤 Nama: ${name}\n` +
-        `📱 No. HP: ${phone}\n` +
-        `📍 Alamat: ${address}\n` +
-        `🍗 Produk: ${product}\n` +
-        `📦 Jumlah: ${quantity}\n` +
-        `📝 Catatan: ${notes || 'Tidak ada'}\n\n` +
-        `Terima kasih sudah mempercayai Meisya Farm! 🙏`
+import { useState } from "react"  
+import { Card, CardContent } from "@/components/ui/card"  
+import { Button } from "@/components/ui/button"  
+import { Input } from "@/components/ui/input"  
+import { Textarea } from "@/components/ui/textarea"  
+import { Phone, MapPin, Clock, Star, ChevronDown, ChevronUp } from "lucide-react"  
+  
+// Data produk  
+const products = [  
+{  
+id: 1,  
+name: "Ayam Potong Segar",  
+desc: "Ayam langsung dari peternakan, sehat & higienis.",  
+price: "Rp 45.000 / ekor",  
+img: "https://images.pexels.com/photos/162744/chicken-poultry-livestock-rural-162744.jpeg?auto=compress&cs=tinysrgb&w=400",  
+},  
+{  
+id: 2,  
+name: "Nugget Ayam",  
+desc: "Olahan sehat tanpa pengawet, cocok untuk keluarga.",  
+price: "Rp 25.000 / pack",  
+img: "https://images.pexels.com/photos/4518665/pexels-photo-4518665.jpeg?auto=compress&cs=tinysrgb&w=400",  
+},  
+{  
+id: 3,  
+name: "Telur Ayam",  
+desc: "Telur segar dengan kualitas terbaik.",  
+price: "Rp 28.000 / kg",  
+img: "https://images.pexels.com/photos/162712/egg-white-food-protein-162712.jpeg?auto=compress&cs=tinysrgb&w=400",  
+},  
+{  
+id: 4,  
+name: "Ayam Kampung",  
+desc: "Ayam kampung asli dengan rasa gurih alami.",  
+price: "Rp 70.000 / ekor",  
+img: "https://images.pexels.com/photos/1407815/pexels-photo-1407815.jpeg?auto=compress&cs=tinysrgb&w=400",  
+},  
+{  
+id: 5,  
+name: "Bakso Ayam",  
+desc: "Bakso ayam kenyal, tanpa borax & bahan berbahaya.",  
+price: "Rp 20.000 / pack",  
+img: "https://images.pexels.com/photos/5409024/pexels-photo-5409024.jpeg?auto=compress&cs=tinysrgb&w=400",  
+},  
+]  
+  
+// Data testimoni  
+const testimonials = [  
+{  
+name: "Budi Santoso",  
+location: "Jakarta Selatan",  
+rating: 5,  
+feedback:  
+"Nuggetnya enak banget, anak-anak suka. Pasti langganan terus di Rasya Farm!",  
+},  
+{  
+name: "Rina Putri",  
+location: "Depok",  
+rating: 5,  
+feedback:  
+"Ayam potong segar dan bersih, beda banget sama di pasar biasa. Recomended!",  
+},  
+{  
+name: "Andi Saputra",  
+location: "Tangerang",  
+rating: 5,  
+feedback: "Telurnya fresh, kuningnya oranye banget. Kualitas top!",  
+},  
+]  
+  
+// Data FAQ  
+const faqs = [  
+{  
+q: "Apakah produk bisa dikirim keluar kota?",  
+a: "Saat ini kami melayani pengiriman sekitar Jabodetabek. Untuk luar kota bisa diskusi via WhatsApp.",  
+},  
+{  
+q: "Apakah produk menggunakan bahan pengawet?",  
+a: "Tidak, semua produk olahan kami sehat tanpa pengawet dan bahan kimia berbahaya.",  
+},  
+{  
+q: "Bagaimana cara order?",  
+a: "Bisa langsung isi form pemesanan di website ini atau chat via WhatsApp untuk konsultasi lebih lanjut.",  
+},  
+{  
+q: "Berapa minimum order?",  
+a: "Minimum order Rp 50.000 untuk area Jakarta dan sekitarnya, diluar area bisa diskusi.",  
+},  
+{  
+q: "Apakah ada garansi kualitas?",  
+a: "Ya, kami berikan garansi 100% fresh. Jika tidak sesuai, bisa dikomplain dan akan kami ganti.",  
+},  
+]  
+  
+function FAQItem({ question, answer }: { question: string; answer: string }) {  
+const [isOpen, setIsOpen] = useState(false)  
+  
+return (  
+<div className="border border-gray-200 rounded-xl overflow-hidden">  
+<button  
+className="w-full p-6 text-left bg-white hover:bg-gray-50 transition-colors flex justify-between items-center"  
+onClick={() => setIsOpen(!isOpen)}  
+>  
+<h4 className="font-semibold text-lg pr-4">{question}</h4>  
+{isOpen ? (  
+<ChevronUp className="h-5 w-5 text-gray-500 flex-shrink-0" />  
+) : (  
+<ChevronDown className="h-5 w-5 text-gray-500 flex-shrink-0" />  
+)}  
+</button>  
+{isOpen && (  
+<div className="px-6 pb-6 bg-yellow-50">  
+<p className="text-gray-700 leading-relaxed">{answer}</p>  
+</div>  
+)}  
+</div>  
+)  
+}  
+  
+export default function App() {  
+// State untuk form  
+const [name, setName] = useState("")  
+const [phone, setPhone] = useState("")  
+const [address, setAddress] = useState("")  
+const [product, setProduct] = useState("")  
+const [quantity, setQuantity] = useState("")  
+const [notes, setNotes] = useState("")  
+const [isSubmitting, setIsSubmitting] = useState(false)  
+  
+const handleSubmit = async (e: React.FormEvent) => {  
+e.preventDefault()  
+setIsSubmitting(true)  
+  
+// Simulate form submission    
+setTimeout(() => {    
+  const message = `*PESANAN BARU - RASYA FARM*\n\n` +    
+    `👤 Nama: ${name}\n` +    
+    `📱 No. HP: ${phone}\n` +    
+    `📍 Alamat: ${address}\n` +    
+    `🍗 Produk: ${product}\n` +    
+    `📦 Jumlah: ${quantity}\n` +    
+    `📝 Catatan: ${notes || 'Tidak ada'}\n\n` +    
+    `Terima kasih sudah mempercayai Rasya Farm! 🙏`    
       
-      const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
-      window.open(whatsappUrl, '_blank')
+  const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`    
+  window.open(whatsappUrl, '_blank')    
       
-      // Reset form
-      setName("")
-      setPhone("")
-      setAddress("")
-      setProduct("")
-      setQuantity("")
-      setNotes("")
-      setIsSubmitting(false)
-    }, 1000)
-  }
-
-  return (
-    <div className="min-h-screen bg-white text-gray-900">
-      {/* Navbar */}
-      <header className="bg-gradient-to-r from-yellow-400 to-yellow-500 p-4 shadow-lg sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-              🐔
-            </div>
-            <h1 className="text-2xl font-bold text-gray-900">Meisya Farm</h1>
-          </div>
-          <nav className="hidden md:flex space-x-6 font-medium">
-            <a href="#produk" className="hover:underline transition-all duration-200">
-              Produk
-            </a>
-            <a href="#tentang" className="hover:underline transition-all duration-200">
-              Tentang
-            </a>
-            <a href="#pesan" className="hover:underline transition-all duration-200">
-              Pesan
-            </a>
-            <a href="#testimoni" className="hover:underline transition-all duration-200">
-              Testimoni
-            </a>
-            <a href="#faq" className="hover:underline transition-all duration-200">
-              FAQ
-            </a>
-            <a href="#kontak" className="hover:underline transition-all duration-200">
-              Kontak
-            </a>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-100 via-yellow-50 to-white py-20 text-center px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-6">
-            <span className="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              ✨ Fresh from Farm to Your Table
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Ternak Ayam & Olahan
-            <span className="text-yellow-600"> Sehat</span>
-          </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Dari kandang langsung ke meja makanmu 🍗✨ Produk segar, sehat, dan
-            higienis untuk keluarga tercinta.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
-              <a href="#produk">Lihat Produk</a>
-            </Button>
-            <Button size="lg" variant="outline" className="border-yellow-500 text-yellow-700 hover:bg-yellow-50 px-8 py-3 text-lg">
-              <a href="#pesan">Pesan Sekarang</a>
+  // Reset form    
+  setName("")    
+  setPhone("")    
+  setAddress("")    
+  setProduct("")    
+  setQuantity("")    
+  setNotes("")    
+  setIsSubmitting(false)    
+}, 1000)  
+  
+}  
+  
+return (  
+<div className="min-h-screen bg-white text-gray-900">  
+{/* Navbar */}  
+<header className="bg-gradient-to-r from-yellow-400 to-yellow-500 p-4 shadow-lg sticky top-0 z-50">  
+<div className="max-w-6xl mx-auto flex justify-between items-center">  
+<div className="flex items-center space-x-2">  
+<div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">  
+🐔  
+</div>  
+<h1 className="text-2xl font-bold text-gray-900">Rasya Farm</h1>  
+</div>  
+<nav className="hidden md:flex space-x-6 font-medium">  
+<a href="#produk" className="hover:underline transition-all duration-200">  
+Produk  
+</a>  
+<a href="#tentang" className="hover:underline transition-all duration-200">  
+Tentang  
+</a>  
+<a href="#pesan" className="hover:underline transition-all duration-200">  
+Pesan  
+</a>  
+<a href="#testimoni" className="hover:underline transition-all duration-200">  
+Testimoni  
+</a>  
+<a href="#faq" className="hover:underline transition-all duration-200">  
+FAQ  
+</a>  
+<a href="#kontak" className="hover:underline transition-all duration-200">  
+Kontak  
+</a>  
+</nav>  
+</div>  
+</header>  
+  
+{/* Hero Section */}  
+<section className="bg-gradient-to-br from-yellow-100 via-yellow-50 to-white py-20 text-center px-4">  
+<div className="max-w-4xl mx-auto">  
+<div className="mb-6">  
+<span className="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">  
+✨ Fresh from Farm to Your Table  
+</span>  
+</div>  
+<h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">  
+Ternak Ayam & Olahan  
+<span className="text-yellow-600"> Sehat</span>  
+</h2>  
+<p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">  
+Dari kandang langsung ke meja makanmu 🍗✨ Produk segar, sehat, dan  
+higienis untuk keluarga tercinta.  
+</p>  
+<div className="flex flex-col sm:flex-row gap-4 justify-center">  
+<Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">  
+<a href="#produk">Lihat Produk</a>  
+</Button>  
+<Button size="lg" variant="outline" className="border-yellow-500 text-yellow-700 hover:bg-yellow-50 px-8 py-3 text-lg">  
+<a href="#pesan">Pesan Sekarang</a>
             </Button>
           </div>
         </div>
