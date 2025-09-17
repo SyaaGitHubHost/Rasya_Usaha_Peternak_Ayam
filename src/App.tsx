@@ -9,7 +9,7 @@ import { Phone, MapPin, Clock, Star, ChevronDown, ChevronUp } from "lucide-react
 const products = [  
 {  
 id: 1,  
-name: "Ayam Potong Segar kontol",  
+name: "Ayam Potong Segar",  
 desc: "Ayam langsung dari peternakan, sehat & higienis.",  
 price: "Rp 45.000 / ekor",  
 img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCmSrwn3PXo2roPyPZAWZjEzzlDvaQ9KkuGkO6pVPuZQ&s=10",  
