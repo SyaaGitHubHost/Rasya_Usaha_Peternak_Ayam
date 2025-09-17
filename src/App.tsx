@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"  
 import { Textarea } from "@/components/ui/textarea"  
 import { Phone, MapPin, Clock, Star, ChevronDown, ChevronUp } from "lucide-react"  
-  
+import { RasyaFoto from "./public/Rasya.jpeg"
 // Data produk  
 const products = [  
 {  
@@ -322,7 +322,7 @@ higienis untuk keluarga tercinta.
             </div>
             <div className="relative">
               <img
-                src="/Rasya.jpeg"
+                src="{RasyaFoto}"
                 alt="Foto Rasya"
                 className="rounded-2xl shadow-xl w-full"
               />
