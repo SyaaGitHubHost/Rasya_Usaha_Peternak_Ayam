@@ -508,7 +508,7 @@ higienis untuk keluarga tercinta.
               className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
             >
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6289512165434"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2"
