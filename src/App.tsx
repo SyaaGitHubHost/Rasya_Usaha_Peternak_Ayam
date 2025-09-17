@@ -365,7 +365,7 @@ higienis untuk keluarga tercinta.
                       Nomor WhatsApp *
                     </label>
                     <Input
-                      placeholder="08123456789"
+                      placeholder="089512165434"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       required
