@@ -322,8 +322,8 @@ higienis untuk keluarga tercinta.
             </div>
             <div className="relative">
               <img
-                src="https://i.postimg.cc/4dpvWctn/1758000407093.jpg"
-                alt="Peternakan Meisya Farm"
+                src="/Rasya.jpg"
+                alt="Foto Rasya"
                 className="rounded-2xl shadow-xl w-full"
               />
               <div className="absolute -bottom-6 -left-6 bg-yellow-400 p-4 rounded-xl shadow-lg">
