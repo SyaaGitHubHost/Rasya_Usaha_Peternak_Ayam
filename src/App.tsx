@@ -322,7 +322,7 @@ higienis untuk keluarga tercinta.
             </div>
             <div className="relative">
               <img
-                src="/Rasya.jpg"
+                src="/Rasya.jpeg"
                 alt="Foto Rasya"
                 className="rounded-2xl shadow-xl w-full"
               />
