@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"  
 import { Textarea } from "@/components/ui/textarea"  
 import { Phone, MapPin, Clock, Star, ChevronDown, ChevronUp } from "lucide-react"  
-import { RasyaFoto from "./public/Rasya.jpeg"
+import RasyaFoto from "./public/Rasya.jpeg"
 // Data produk  
 const products = [  
 {  
